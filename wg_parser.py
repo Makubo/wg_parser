@@ -181,6 +181,5 @@ for policy in root.find('abs-policy-list').findall('abs-policy'):
     if policy.find('policy-nat').text:
         nat = get_nat(policy.find('policy-nat').text)
         to = my_append(to,get_nat_string(nat))
-        
     print(policyNumber, policyAction, policyEnabled, policyName, fr, to, policyService, sep=';')
     policyNumber = policyNumber + 1
